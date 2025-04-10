@@ -186,8 +186,8 @@
         </div>
 
         <!-- Azure Projects -->
-        <div class="project-card">
-            <h3>Azure Projects</h3>
+        <!-- <div class="project-card"> -->
+            <!-- <h3>Azure Projects</h3>
             <ul class="project-list">
                 <li class="project-item">
                     <a href="https://dev.azure.com/stef663k/Svelte%20projects" class="project-link">
@@ -217,7 +217,7 @@
                     </a>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </div>
 </div>
 
