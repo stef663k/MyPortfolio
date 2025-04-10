@@ -23,7 +23,7 @@
         P6: {date: new Date('2025-03-24'), name: "Praktikforløb 6"},
         H6: {date: new Date('2025-10-20'), name: "Hovedforløb 6"},
         p7: {date: new Date('2025-11-22'), name: "Praktikforløb 7"},
-        Slut: {date: new Date('2025-12-31'), name: "Slut"}
+        Slut: {date: new Date('2026-03-05'), name: "Slut"}
     };
 
     /**
