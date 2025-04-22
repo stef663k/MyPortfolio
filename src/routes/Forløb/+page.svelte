@@ -239,7 +239,7 @@
         }
 
         @media (max-width: 480px){
-            .forløb h1 {
+            .forloeb h1 {
                 font-size: 1.5rem;
                 padding: 0.1rem;
                 text-align: center;
@@ -270,7 +270,7 @@
         }
 
         @media (max-width: 768px) {
-            .forløbh1 h1 {
+            .forloeb h1 {
                 font-size: 2rem;
                 padding: 0 1rem;
                 text-align: center;
