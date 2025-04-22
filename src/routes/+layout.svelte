@@ -102,6 +102,7 @@
         height: 48px;
         margin-right: 3rem;
         transition: transform 0.3s ease;
+        user-select: none;
     }
 
     .logo-image:hover {

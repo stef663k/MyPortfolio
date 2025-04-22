@@ -67,18 +67,18 @@
             color: #2d3436;
         }
 
-        .forløbh1 {
+        .forloeb {
             display: flex;
             justify-content: center;
             padding: 4rem 0 3rem;
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            background: linear-gradient(135deg, #4d0b8a 0%, #8a2be2 50%, #60219a 100%);
             color: white;
             margin: 0;
             position: relative;
             overflow: hidden;
         }
 
-        .forløbh1::before {
+        .forloeb::before {
             content: '';
             position: absolute;
             width: 150%;
@@ -87,7 +87,7 @@
             pointer-events: none;
         }
 
-        .forløbh1 h1 {
+        .forloeb h1 {
             font-size: 2.75rem;
             margin: 0;
             font-weight: 700;
@@ -140,13 +140,14 @@
             top: 0;
             height: 100%;
             width: 4px;
-            background: #3498db;
+            background: rgba(138, 43, 226, 0.6);
             transition: width 0.3s ease;
         }
 
         .timeline-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            background: rgba(138, 43, 226, 0.1);
         }
 
         .timeline-item:hover::before {
@@ -178,13 +179,13 @@
             font-weight: 600;
             color: #2d3436;
         }
-
+/* 
         .completed {
             background: #ffffff;
-        }
+        } */
 
         .completed .status-indicator {
-            background: #95a5a6;
+            background: #9eacad;
         }
 
         .completed::after {
@@ -198,8 +199,11 @@
         }
 
         .current {
-            background: #3498db;
-            border-color: #2980b9;
+            background: rgba(138, 43, 226, 0.6);
+            border-color: blueviolet;
+        }
+        .current:hover{
+            background: rgba(138, 43, 226, 0.5);
         }
 
         .current .date {
@@ -308,7 +312,7 @@
     </style>
 </header>
 
-<div class="forløbh1">
+<div class="forloeb">
     <h1>Uddannelsesforløb</h1>
 </div>
 
