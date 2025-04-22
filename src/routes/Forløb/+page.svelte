@@ -118,7 +118,6 @@
 
         .timeline-item {
             padding: 1.5rem 2rem;
-            /* width: 100%; */
             margin: 0.5rem 0;
             border-radius: 16px;
             color: white;
