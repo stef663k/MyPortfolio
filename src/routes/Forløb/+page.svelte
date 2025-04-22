@@ -258,11 +258,11 @@
                 gap: 1rem;
             }
 
-            .status-indicator {
+            /* .status-indicator {
                 position: absolute;
                 left: 1.25rem;
                 top: 1.25rem;
-            }
+            } */
         }
 
         @media (min-width: 769px) {
