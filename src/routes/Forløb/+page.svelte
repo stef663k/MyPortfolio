@@ -255,7 +255,13 @@
             }
 
             .completed::after {
-                display: none; /* Hide on very small screens to prevent overcrowding */
+                font-size: 0.8rem;
+                right: 0.75rem;
+                opacity: 0.8;
+            }
+
+            .item-content {
+                padding-right: 4rem;
             }
         }
 
