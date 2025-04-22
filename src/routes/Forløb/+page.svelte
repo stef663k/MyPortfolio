@@ -253,16 +253,10 @@
 
             .timeline-item {
                 padding: 1.25rem;
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                align-items: center;
                 gap: 1rem;
             }
-
-            /* .status-indicator {
-                position: absolute;
-                left: 1.25rem;
-                top: 1.25rem;
-            } */
         }
 
         @media (min-width: 769px) {
