@@ -8,6 +8,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 2rem 1rem; 
+            text-align: center; 
+        }
+        .mainName h1 {
+            margin: 0;
+            fontsize: 2rem;
+            line-height: 1.2;
+            max-width: 100%;
+        }
+
+        @media (max-width: 380px) {
+            .mainName h1{
+                font-size: 1.75rem;
+            }
         }
     
         .aboutme {

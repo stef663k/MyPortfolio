@@ -15,13 +15,14 @@
         {label: "Forløb", href: "/Forløb"}
     ];
 
-    const handleMobileClick = () => (showMobileMenu = !showMobileMenu);
+    const handleMobileClick = () => {
+        showMobileMenu = !showMobileMenu;
+    };
 
     /**
      * @param {MediaQueryListEvent} e
      */
     const mediaQueryHandler = (e) =>{
-        
         if(!e.matches){
             showMobileMenu = false;
         }
@@ -35,29 +36,10 @@
             handleMobileClick();
         }
     };
-
-    onMount(() => {
-        const mediaListener = window.matchMedia("(max-width: 768px)");
-
-        mediaListener.addEventListener("change", mediaQueryHandler);
-
-        const mobileIcon = document.querySelector(".mobile-icon");
-
-            /**
-            * @type {HTMLDivElement}
-            */
-        if (mobileIcon) {
-            mobileIcon.addEventListener("click", handleMobileClick);
-            mobileIcon.addEventListener("keydown", handleKeyPress);
-        }
-  });
-
-
 </script>
 
 <nav>
     <div class="inner">
-        <!-- Add the mobile icon button -->
         <div 
             class="mobile-icon {showMobileMenu ? 'active' : ''}" 
             role="button"
@@ -126,7 +108,6 @@
         transform: scale(1.05);
     }
 
-    /* Modern mobile menu icon */
     .mobile-icon {
         display: none;
         width: 32px;
@@ -178,15 +159,16 @@
         left: 0;
     }
 
-    /* Mobile phones (up to 480px) */
     @media (max-width: 480px) {
         .inner {
             padding: 0 16px;
+            justify-content: space-between; 
         }
 
         .mobile-icon {
             display: block;
             margin-left: auto;
+            z-index: 2; 
         }
 
         .navbar-list {
@@ -202,15 +184,25 @@
             gap: 1rem;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             border-radius: 0 0 16px 16px;
+            z-index: 1000; 
         }
 
         .logo-image {
-            height: 40px; /* Slightly smaller logo for mobile */
-            margin-right: 2rem;
+            height: 40px;
+            margin-right: 0; 
+            display: block; 
+        }
+
+        .image-alpaca {
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .navbar-list.mobile {
+            display: flex !important;
         }
     }
 
-    /* Tablets (481px to 768px) */
     @media (min-width: 481px) and (max-width: 768px) {
         .inner {
             padding: 0 24px;
@@ -237,7 +229,6 @@
         }
     }
 
-    /* Shared mobile menu styles */
     @media (max-width: 768px) {
         .navbar-list.mobile {
             display: flex;
