@@ -118,7 +118,7 @@
 
         .timeline-item {
             padding: 1.5rem 2rem;
-            width: 100%;
+            /* width: 100%; */
             margin: 0.5rem 0;
             border-radius: 16px;
             color: white;
@@ -179,7 +179,6 @@
             color: #2d3436;
         }
 
-        /* Status Colors */
         .completed {
             background: #ffffff;
         }
@@ -214,7 +213,6 @@
             background: #dcdde1;
         }
 
-        /* Animations */
         @keyframes itemEntrance {
             from { opacity: 0; transform: translateX(-20px); }
             to { opacity: 1; transform: translateX(0); }
@@ -224,6 +222,20 @@
             animation: itemEntrance 0.6s ease-out forwards;
             animation-delay: calc(var(--index) * 0.1s);
             opacity: 0;
+        }
+
+        @media (max-width: 480px){
+            .forløb h1 {
+                font-size: 1.5rem;
+                padding: 0.1rem;
+                text-align: center;
+            }
+
+            .timeline-container {
+                margin: -2rem auto 2rem;
+                padding: 0 1rem;
+                text-align: center;
+            }
         }
 
         @media (max-width: 768px) {
@@ -253,7 +265,6 @@
             }
         }
 
-        /* Modern Scrollbar */
         @media (min-width: 769px) {
             :global(::-webkit-scrollbar) {
                 width: 8px;
