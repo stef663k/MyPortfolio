@@ -44,14 +44,11 @@
                 const element = document.getElementById(`date${key}`);
                 if (element) {
                     if (key === 'P6') {
-                        // This is the current course (Praktikforløb 6)
                         element.classList.add("current");
                     } else if (currentDate >= course.date || 
                              ['G2', 'P1', 'H1', 'P2', 'H2', 'P3', 'H3', 'P4', 'H4', 'P5', 'H5'].includes(key)) {
-                        // This is a completed course
                         element.classList.add("completed");
                     } else {
-                        // This is an upcoming course
                         element.classList.add("upcoming");
                     }
                 }

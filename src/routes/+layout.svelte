@@ -37,7 +37,7 @@
     };
 
     onMount(() => {
-        const mediaListener = window.matchMedia("(max-width: 767px)");
+        const mediaListener = window.matchMedia("(max-width: 768px)");
 
         mediaListener.addEventListener("change", mediaQueryHandler);
 
@@ -57,7 +57,17 @@
 
 <nav>
     <div class="inner">
-        <!-- Mobile toggle button remains the same -->
+        <!-- Add the mobile icon button -->
+        <div 
+            class="mobile-icon {showMobileMenu ? 'active' : ''}" 
+            role="button"
+            tabindex="0"
+            aria-label="Toggle mobile menu"
+            on:click={handleMobileClick}
+            on:keydown={handleKeyPress}
+        >
+            <div class="middle-line"></div>
+        </div>
         <ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
             {#each navItems as item, index}
                 <li>
@@ -168,8 +178,40 @@
         left: 0;
     }
 
-    /* Modern mobile menu */
-    @media (max-width: 767px) {
+    /* Mobile phones (up to 480px) */
+    @media (max-width: 480px) {
+        .inner {
+            padding: 0 16px;
+        }
+
+        .mobile-icon {
+            display: block;
+            margin-left: auto;
+        }
+
+        .navbar-list {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            flex-direction: column;
+            padding: 16px;
+            gap: 1rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 16px 16px;
+        }
+
+        .logo-image {
+            height: 40px; /* Slightly smaller logo for mobile */
+            margin-right: 2rem;
+        }
+    }
+
+    /* Tablets (481px to 768px) */
+    @media (min-width: 481px) and (max-width: 768px) {
         .inner {
             padding: 0 24px;
         }
@@ -193,7 +235,10 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             border-radius: 0 0 16px 16px;
         }
+    }
 
+    /* Shared mobile menu styles */
+    @media (max-width: 768px) {
         .navbar-list.mobile {
             display: flex;
         }
@@ -206,7 +251,6 @@
         }
     }
 
-    /* Modern hamburger animation */
     .mobile-icon:after,
     .mobile-icon:before,
     .middle-line {
