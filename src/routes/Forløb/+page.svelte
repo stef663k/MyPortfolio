@@ -233,8 +233,15 @@
 
             .timeline-container {
                 margin: -2rem auto 2rem;
-                padding: 0 1rem;
-                text-align: center;
+                padding: 1rem;
+                text-align: left;
+            }
+
+            .timeline-item {
+                padding: 1rem;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.75rem;
             }
         }
 
