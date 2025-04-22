@@ -187,6 +187,16 @@
             background: #95a5a6;
         }
 
+        .completed::after {
+            content: 'Afsluttet';
+            font-style: italic;
+            color: #95a5a6;
+            position: absolute;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         .current {
             background: #3498db;
             border-color: #2980b9;
@@ -243,6 +253,10 @@
                 align-items: center;
                 gap: 0.75rem;
             }
+
+            .completed::after {
+                display: none; /* Hide on very small screens to prevent overcrowding */
+            }
         }
 
         @media (max-width: 768px) {
@@ -263,6 +277,11 @@
                 flex-direction: row;
                 align-items: center;
                 gap: 1rem;
+            }
+
+            .completed::after {
+                right: 1rem;
+                font-size: 0.9rem;
             }
         }
 
