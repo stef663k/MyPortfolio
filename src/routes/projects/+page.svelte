@@ -18,7 +18,7 @@
     .projectName {
         max-width: 1280px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: 3rem 2rem;
     }
 
     h1 {

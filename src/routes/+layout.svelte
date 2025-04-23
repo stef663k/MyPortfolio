@@ -20,6 +20,15 @@
         showMobileMenu = !showMobileMenu;
     };
 
+
+    const handleNavClick = () => {
+        if (window.innerWidth <= 768) {
+            showMobileMenu = false;
+        }
+    };
+
+
+
     /**
      * @param {MediaQueryListEvent} e
      */
@@ -37,6 +46,7 @@
             handleMobileClick();
         }
     };
+
 </script>
 
 <nav>
@@ -63,6 +73,7 @@
                             class="listNav" 
                             class:active={$page.url.pathname === item.href}
                             href={item.href}
+                            on:click={handleNavClick}
                         >
                             {item.label}
                         </a>
@@ -104,7 +115,6 @@
         display: flex;
         align-items: center;
     }
-
 
 
     .logo-image {
