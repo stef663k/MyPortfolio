@@ -57,6 +57,7 @@
     });
 
 </script>
+<title>Forløb</title>
 <header>
     <style>
         :global(body) {

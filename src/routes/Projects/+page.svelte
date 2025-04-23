@@ -42,7 +42,7 @@
 
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 2rem;
         margin-top: 3rem;
     }
@@ -73,6 +73,7 @@
     .project-list {
         display: grid;
         gap: 1.5rem;
+        padding: 0;
     }
 
     .project-item {
@@ -220,4 +221,5 @@
         </div> -->
     </div>
 </div>
+<title>Projects</title>
 

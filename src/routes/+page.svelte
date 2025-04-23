@@ -41,18 +41,20 @@
 </head>
 
 <body>
-    <div class="mainName">
-        <h1>Welcome to Stefan's portfolio</h1>
-    </div>
-    <div class="aboutme">
-        <p>
-            I'm a 36 year old guy, who decided to switch day job out with the books during a pandemic. I started learning c# and,
-            I got a couple of projects under the project tap, where you can see them on github. 
-            There will come more projects on there as i make them. 
-            I also started dabling in Zig and Unity. 
-            This website was made with sveltekit.
-        
-        </p>
+    <div class="welcome-text">
+        <div class="mainName">
+             <h1>Welcome to Stefan's portfolio</h1>
+        </div>
+        <div class="aboutme">
+            <p>
+                I'm a 36 year old guy, who decided to switch day job out with the books during a pandemic. I started learning c# and,
+                I got a couple of projects under the project tap, where you can see them on github. 
+                There will come more projects on there as i make them. 
+                I also started dabling in Zig and Unity. 
+                This website was made with sveltekit.
+            
+            </p>
+        </div>
     </div>
 </body>
 

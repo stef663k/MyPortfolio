@@ -11,8 +11,8 @@
     const navItems = [
         {label: "", href: "/", isLogo: true},
         {label: "Home", href: "/"},
-        {label: "Projects", href:"/Projects"},
-        {label: "Forløb", href: "/Forløb"}
+        {label: "Projects", href:"/projects"},
+        {label: "Forløb", href: "/forloeb"}
     ];
 
     const handleMobileClick = () => {
@@ -98,9 +98,12 @@
         align-items: center;
     }
 
+    .image-alpaca{
+        margin-right: 3rem;
+    }
+
     .logo-image {
         height: 48px;
-        margin-right: 3rem;
         transition: transform 0.3s ease;
         user-select: none;
     }
@@ -112,7 +115,7 @@
     .mobile-icon {
         display: none;
         width: 32px;
-        height: 32px;
+        height: 31px;
         position: relative;
         cursor: pointer;
         background: transparent;
