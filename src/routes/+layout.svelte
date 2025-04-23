@@ -3,6 +3,7 @@
     import Alpaca from "$lib/images/alpaca.png";
     import { dev } from "$app/environment";
     import { injectAnalytics } from '@vercel/analytics/sveltekit'
+    import { page } from '$app/stores';
 
     injectAnalytics({mode: dev ? 'development' : 'production'});
 
@@ -58,7 +59,13 @@
                             <img class="logo-image" src={Alpaca} alt="Alpaca Logo" />
                         </a>
                     {:else}
-                        <a class="listNav" href={item.href}>{item.label}</a>
+                        <a 
+                            class="listNav" 
+                            class:active={$page.url.pathname === item.href}
+                            href={item.href}
+                        >
+                            {item.label}
+                        </a>
                     {/if}
                 </li>
             {/each}
@@ -98,9 +105,7 @@
         align-items: center;
     }
 
-    .image-alpaca{
-        margin-right: 3rem;
-    }
+
 
     .logo-image {
         height: 48px;
@@ -140,6 +145,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         font-weight: 500;
         position: relative;
+        background: rgba(138, 43, 226, 0.01);
     }
 
     .navbar-list a:not(.image-alpaca):hover {
@@ -242,7 +248,12 @@
             width: 100%;
             justify-content: center;
             padding: 12px 24px;
-            background: rgba(138, 43, 226, 0.05);
+        }
+    }
+
+    @media(min-width: 769px){
+        .image-alpaca{
+            margin-right: 3rem;
         }
     }
 
@@ -284,4 +295,11 @@
         opacity: 0;
         transform: translateX(-20px);
     }
+
+    .navbar-list a:not(.image-alpaca).active {
+        background: rgba(138, 43, 226, 0.1);
+        /* color: blueviolet; */
+    }
+
+
 </style>
