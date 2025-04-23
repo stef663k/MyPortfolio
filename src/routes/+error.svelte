@@ -14,29 +14,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: calc(100vh - 72px); 
-        padding: 2rem;
+        min-height: calc(100vh - 75px);
     }
 
     .error-content {
         text-align: center;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 2.5rem;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 0.8rem;
+        padding: 2rem 4rem;
         box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     h1 {
-        font-size: 4rem;
-        margin: 0 0 1rem 0;
+        font-size: 3rem;
+        margin: 0;
         color: #dc3545;
     }
 
     p {
         font-size: 1.25rem;
-        color: #6c757d;
+        color: #636e72;
         margin: 0;
     }
 </style>

@@ -33,7 +33,7 @@
         content: '';
         width: 60px;
         height: 4px;
-        background: #3498db;
+        background: rgba(138, 43, 226, 0.6);
         position: absolute;
         bottom: -1rem;
         left: 50%;
@@ -96,7 +96,7 @@
         border-radius: 12px;
         object-fit: contain;
         padding: 12px;
-        background: rgba(52, 152, 219, 0.1);
+        background: rgba(138, 43, 226, 0.1);
         transition: transform 0.3s ease;
     }
 
@@ -124,7 +124,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #3498db;
+        background: blueviolet;
         transition: width 0.3s ease;
     }
 
