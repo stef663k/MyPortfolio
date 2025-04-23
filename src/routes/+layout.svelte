@@ -11,7 +11,7 @@
     const navItems = [
         {label: "", href: "/", isLogo: true},
         {label: "Home", href: "/"},
-        {label: "Projects", href:"/test"},
+        {label: "Projects", href:"/projects"},
         {label: "Forløb", href: "/forloeb"}
     ];
 
