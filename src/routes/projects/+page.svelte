@@ -14,54 +14,57 @@
         margin: 0;
         color: #2d3436;
     }
+        .projectBack {
+            display: flex;
+            justify-content: center;
+            padding: 4rem 0 3rem;
+            background: linear-gradient(135deg, #4d0b8a 0%, #8a2be2 50%, #60219a 100%);
+            color: white;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
 
-    .projectName {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 3rem 2rem;
-    }
+        .projectBack::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.1) 100%);
+            pointer-events: none;
+        }
 
-    h1 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 3rem;
-        color: #0f172a;
-        position: relative;
-    }
-
-    h1::after {
-        content: '';
-        width: 60px;
-        height: 4px;
-        background: rgba(138, 43, 226, 0.6);
-        position: absolute;
-        bottom: -1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 2px;
-    }
+        .projectBack h1 {
+            font-size: 2.75rem;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
 
     .project-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        box-sizing: border-box;
+        max-width: 1080px;
+        margin: -2.5rem auto 3rem;
     }
 
     .project-card {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
-        border-radius: 16px;
-        padding: 2rem;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+        box-sizing: border-box;
+        border-radius: 24px;
+        padding: 2.5rem;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
-    }
+        position: relative;
+}
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-    }
+
 
     .project-card h3 {
         font-size: 1.25rem;
@@ -75,15 +78,18 @@
         display: grid;
         gap: 1.5rem;
         padding: 0;
+        list-style: none;
+        margin: 0;
     }
 
     .project-item {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 1rem;
         border-radius: 12px;
         transition: background 0.3s ease;
+        box-sizing: border-box;
     }
 
     .project-item:hover {
@@ -91,8 +97,8 @@
     }
 
     .project-image {
-        width: 64px;
-        height: 64px;
+        width: 80px;
+        height: 80px;
         border-radius: 12px;
         object-fit: contain;
         padding: 12px;
@@ -137,23 +143,53 @@
         font-size: 0.9rem;
         margin-top: 0.5rem;
     }
+            @media (max-width: 480px){
+            .projectBack h1 {
+                font-size: 1.5rem;
+                padding: 0.1rem;
+                text-align: center;
+            }
 
-    @media (max-width: 768px) {
-        .projectName {
-            padding: 2rem 1rem;
+            .project-grid {
+                margin: -2rem auto 2rem;
+            }
+            .project-card {
+                padding: 1rem;
+            }
         }
+
+        @media (max-width: 768px) {
+            .projectBack h1 {
+                font-size: 2rem;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .project-grid {
+                margin: -2rem auto 2rem;
         
-        h1 {
-            font-size: 2rem;
+            }
+            .project-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
         }
-    }
+        @media (min-width: 769px) {
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            }
+        }
+
 </style>
 
 <div class="projectName">
-    <h1>Projects</h1>
+    <div class="projectBack">
+        <h1>Projects</h1>
+    </div>
     
     <div class="project-grid">
-        <!-- GitHub Projects -->
         <div class="project-card">
             <h3>GitHub Projects</h3>
             <ul class="project-list">
@@ -186,40 +222,6 @@
                 </li>
             </ul>
         </div>
-
-        <!-- Azure Projects -->
-        <!-- <div class="project-card"> -->
-            <!-- <h3>Azure Projects</h3>
-            <ul class="project-list">
-                <li class="project-item">
-                    <a href="https://dev.azure.com/stef663k/Svelte%20projects" class="project-link">
-                        <img src={svelteImage} alt="Svelte" class="project-image" />
-                        <div class="project-info">
-                            <span>Svelte Projects</span>
-                            <div class="project-description">Modern web applications using Svelte framework</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="project-item">
-                    <a href="https://dev.azure.com/stef663k/Zig%20projects" class="project-link">
-                        <img src={zig} alt="Zig" class="project-image" />
-                        <div class="project-info">
-                            <span>Zig Projects</span>
-                            <div class="project-description">System programming experiments with Zig</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="project-item">
-                    <a href="https://dev.azure.com/stef663k/FirstMauiApp" class="project-link">
-                        <img src={maui} alt="MAUI" class="project-image" />
-                        <div class="project-info">
-                            <span>MAUI Portfolio</span>
-                            <div class="project-description">Cross-platform portfolio application using .NET MAUI</div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div> -->
     </div>
 </div>
 

@@ -65,7 +65,7 @@
             {#each navItems as item, index}
                 <li>
                     {#if item.isLogo}
-                        <a class="image-alpaca" href={item.href}>
+                        <a class="image-alpaca" href={item.href} on:click={handleNavClick}>
                             <img class="logo-image" src={Alpaca} alt="Alpaca Logo" />
                         </a>
                     {:else}
