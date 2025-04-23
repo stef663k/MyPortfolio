@@ -6,6 +6,7 @@
     import zig from "$lib/images/zig.png";
     import maui from "$lib/images/dotnet-removebg-preview.png";
 </script>
+<title>Projects</title>
 <style>
     :global(body) {
         background: #f8f9fa;
@@ -221,5 +222,4 @@
         </div> -->
     </div>
 </div>
-<title>Projects</title>
 
