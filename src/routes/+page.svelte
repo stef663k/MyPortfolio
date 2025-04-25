@@ -29,6 +29,9 @@
 </svelte:head>
 
 <style>
+    .welcome-text{
+        padding-top: 1rem;
+    }
     .mainName {
         display: flex;
         justify-content: center;
@@ -60,11 +63,12 @@
         font-size: 20px;
         text-align: center;
         line-height: 1.5;
+        max-width: 650px;
     }
 
     .mainName h1::after {
         content: '';
-        width: 60px;
+        width: 14rem;
         height: 4px;
         background: rgba(138, 43, 226, 0.6);
         position: absolute;
