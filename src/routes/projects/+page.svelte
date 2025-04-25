@@ -194,7 +194,7 @@
             <h3>GitHub Projects</h3>
             <ul class="project-list">
                 <li class="project-item">
-                    <a href="https://github.com/stef663k/WebServer" class="project-link">
+                    <a href="https://github.com/stef663k/WebServer" class="project-link" target="_blank" rel="noopener noreferrer">
                         <img src={server} alt="Web Server" class="project-image" />
                         <div class="project-info">
                             <span>Web Server</span>
@@ -203,7 +203,7 @@
                     </a>
                 </li>
                 <li class="project-item">
-                    <a href="https://github.com/stef663k/ZigConsoleCalculator" class="project-link">
+                    <a href="https://github.com/stef663k/ZigConsoleCalculator" class="project-link" target="_blank" rel="noopener noreferrer">
                         <img src={calculator} alt="Calculator" class="project-image" />
                         <div class="project-info">
                             <span>Zig Console Calculator</span>
@@ -212,7 +212,7 @@
                     </a>
                 </li>
                 <li class="project-item">
-                    <a href="https://github.com/stef663k/Webscraper" class="project-link">
+                    <a href="https://github.com/stef663k/Webscraper" class="project-link" rel="noopener noreferrer">
                         <img src={scraper} alt="Web Scraper" class="project-image" />
                         <div class="project-info">
                             <span>Web Scraper</span>
